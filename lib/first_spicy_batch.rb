@@ -5,4 +5,19 @@
 
 def first_spicy_batch(n)
   # your code here
+  firstBatch = 0
+  lastBatch = n
+  while firstBatch < lastBatch
+    mid = firstBatch + (lastBatch - firstBatch) / 2
+
+    if is_spicy_batch(mid)
+      lastBatch = mid
+    else
+      firstBatch = mid + 1
+    end
+  end
+
+  firstBatch
 end
+
+
